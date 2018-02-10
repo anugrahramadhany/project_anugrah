@@ -1,0 +1,28 @@
+
+<form #f="ngForm" (ngSubmit)="login(f)" action="action_page.php">
+
+
+  <div class="login-box">
+    <h1>Footballhippie Login Form</h1>
+    <form>
+      <p>Username</p>
+      <input type="text" placeholder="Enter Username" name="username" ngModel>
+      <p>Password</p>
+      <input type="password" placeholder="Enter Password" name="password" ngModel>
+    </form>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-danger " routerLink="">Cancel</button>
+
+  </div>
+
+  <div class="alert alert-warning" *ngIf="usernameError == true">
+    All fields is required.
+  </div>
+  <div class="alert alert-warning" *ngIf="submitError == true">
+    Login Failed.
+    <br>Please check your username or password.
+  </div>
+
+
+</form>
+

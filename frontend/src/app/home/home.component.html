@@ -1,0 +1,50 @@
+<!-- HEADER -->
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>img</h1>
+    <p></p>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-10 col-sm-8 col-md-8 col-xs-offset-1 col-sm-offset-2 col-md-offset-2">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <h3>Latest Article !</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-sm-8 col-md-8 col-xs-offset-1 col-sm-offset-2 col-md-offset-2">
+
+      <div class="row">
+        <div class="col-md-6 col-offset-md-3" *ngFor="let a of articleList">
+          <div class="content">
+            <img src="{{a.articleImage}}" class="img-responsive" style="width:100%" alt="Image">
+            <div class="caption">
+              <h1 style="font-size: 14px;color: black;">{{a.title}}</h1>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="w3-row-padding w3-padding-16 w3-center" *ngFor="let a of articleList" id="">
+  <div class="w3-quarter">
+    <img src="{{a.articleImage}}" alt="image" class="img-responsive" style="width:100%">
+    <h3><a routerLink="">{{a.title}}</a></h3>
+    <p></p>
+  </div>
+  
+</div> -->

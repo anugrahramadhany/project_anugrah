@@ -1,0 +1,35 @@
+<div class="container">
+    <form action="action_page.php"  #f="ngForm" (ngSubmit)="submit(f)">
+        <div class="row">
+            <div class="col-25">
+                <input type="file" name="" id="" (change)="fileChange($event)">
+            </div>
+            <div class="col-25">
+                <label for="fname" style="color: white">Title</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="title" placeholder="Title..." ngModel>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label style="color: white">Excerpt</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="excerpt" maxlength="140" placeholder="Write your excerpt .." ngModel>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label style="color: white">Story</label>
+            </div>
+            <div class="col-75">
+                <textarea name="story" placeholder="Write something.." style="height:200px" ngModel></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Submit </button>
+        </div>
+    </form>
+</div>
